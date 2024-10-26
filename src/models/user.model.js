@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { required } from "nodemon/lib/config";
 
 const userSchema = new mongoose.Schema({
     name:{
@@ -13,9 +12,13 @@ const userSchema = new mongoose.Schema({
     password:{
         type:String,
         required:true
-    }
+    },
+    forgotPasswordToken:String,
+    forgotPasswordTokenExpiray:Date,
+    verifyToken:String,
+    verifyTokenExpiray:Date
 })
 
-const user = mongoose.model.user || mongoose.model('users',userSchema);
+const user = mongoose.model.users || mongoose.model('users',userSchema);
 
 export default user;

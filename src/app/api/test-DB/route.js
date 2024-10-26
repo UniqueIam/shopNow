@@ -1,6 +1,6 @@
 import React from 'react'
 import user from "@/models/user.model";
-import { connectDB } from '@/lib/dbConfig';
+import { connectDB } from '@/db/dbConfig';
 
 export async function GET(){
     try {

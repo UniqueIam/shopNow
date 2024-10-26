@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import { connectDB } from "@/lib/dbConfig";
+import { connectDB } from "@/db/dbConfig";
 
 export default function Home() {
   connectDB()
